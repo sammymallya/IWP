@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'poppins', sans-serif;
+}
+
+:root {
+  --text-bg-color: #ededed;
+  --main-bg-color: #00abd0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+
+.logo {
+    
+  font-size: large;
+   color: whitesmoke;
+   margin-left:10px;
+  
+}
+
+  
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 20px;
+  color: whitesmoke;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+  border-radius: 20px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: lightseagreen;
+  background:white;
+}
+
+  #text {
+      font-size: 5vw;
+      text-align: center;
+      color: white;
+  }
+
+  #btn {
+      font-size: 1.2em;
+  }
+
+  
+
+  .event-card {
+      width: 80%;
+      margin: 10px 0;
+  }
+
+
+/* Hide the event form initially */
+.hidden {
+  display: flex;
+}
+
+/* Style for the event form */
+#eventForm {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  position: relative;
+  
+}
+
+#eventForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:relative;
+}
+
+#eventForm label {
+  margin-bottom: 5px;
+  color: #2b1055; /* Adjust color as needed */
+}
+
+#eventForm input,
+#eventForm button {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #2b1055; /* Adjust color as needed */
+}
+
+#eventForm button {
+  background: #2b1055; /* Adjust color as needed */
+  color: white;
+  cursor: pointer;
+}
+
+#eventForm button:hover {
+  background: #fff;
+  color: #2b1055;
+}
+
+/* Style for the event container */
+
+
+.event-card {
+  width: 300px;
+  padding: 20px;
+  background-color: var(--text-bg-color);
+  border-radius: 10px;
+  margin: 0 10px;
+  color: white;
+}
+
+.event-card h2 {
+  color: #2b1055;
+}
+
+.event-card p {
+  color: #2b1055;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+body {
+  background-image: url("hog.jpg");
+  background-size: cover;
+   /* Set a minimum height for the body */
+  margin: 0; /* Remove default body margin */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items:top;
+  padding-top: 110px;
+}
+
+/* Rest of your existing styles */
