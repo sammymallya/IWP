@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event and Calendar</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div id="logo"><img src="./images/logo2.jpg" alt="logo"></div>
+            <div id="explore"><a href="event1.html"><h1>Explore</h1> </a></div>
+            <div id="About"><a href="about.html"><h1>About</h1></a></div>
+            <div id="Contact"><a href="contact.html"><h1>Contact Us</h1></a></div>
+        </div>
+    </header>
+    <section>
+        <form name="myForm" onsubmit="return validation()">
+            <fieldset>
+                <legend><b>Event Registration</b></legend>
+                
+                Name: <input type="text" id="name" name="name"><br>
+                Phone: <input type="text" id="number" name="number" size="10"><br>
+                Usn: <input type="text" id="usn" name="usn"><br>
+                College mail-ID: <input type="text" id="email" name="email"><br>
+                Event name:  
+                <select id="event" name="event">
+                    <option value="Vibe">Vibe-dance battle</option>
+                    <option value="lazzerna">Lazzerna</option>
+                    <option value="Roadies">Roadies</option>
+                </select><br><br>
+                
+            </fieldset>
+            <input type="submit" name="submit">
+        </form>
+    </section>
+    <script>
+        function validation() {
+            var usn=document.getElementById("usn").value;
+            var email=document.getElementById("email").value;
+            var atpos=email.indexOf("@");
+            var dotpos=email.lastIndexOf(".");
+            if(atpos<1 || dotpos<atpos+2 || dotpos+1 >=email.length)
+                {
+                    window.alert("Invalid Mail ID!");
+                }
+            if(usn.length<=0 || usn.length<10)
+            {
+                window.alert("Enter valid USN!");
+            }
+            var n = document.getElementById("name").value.trim();
+            if (n == "") {
+                window.alert("Name cannot be blank");
+                return false;
+            }
+
+            var ph = document.getElementById("number").value;
+            var phreg = /^[0-9]{10}$/;
+            if (!phreg.test(ph)) {
+                alert("Phone number invalid");
+                return false;
+            }
+           
+            return true; // Added return true to submit the form if validation passes
+        }
+    </script>
+</body>
+</html>
